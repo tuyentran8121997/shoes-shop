@@ -14,12 +14,14 @@ hamburger.addEventListener("click", mobileMenu);
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenuMobile.classList.toggle("active");
+    document.body.classList.toggle("lock-scroll");
 }
 const navMobileLink = document.querySelectorAll(".nav-mobile__link");
 navMobileLink.forEach(e => e.addEventListener("click", closeMenu));
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenuMobile.classList.remove("active");
+    document.body.classList.remove("lock-scroll");
 }
 
 // CAROUSEL
