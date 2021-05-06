@@ -24,7 +24,6 @@
 
     .nav-mobile {
         left: -100%;
-        position: fixed;
         display: block;
     }
 
