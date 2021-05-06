@@ -1,10 +1,12 @@
 // SEARCH OVERLAY FULL SCREEN
 function openSearch() {
     document.getElementById("searchOverlay").style.display = "block";
+    document.body.classList.toggle("lock-scroll");
 }
 
 function closeSearch() {
     document.getElementById("searchOverlay").style.display = "none";
+    document.body.classList.remove("lock-scroll");
 }
 
 // NAVBAR MOBILE
