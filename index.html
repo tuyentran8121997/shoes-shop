@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Heaven Shoes - Best of shoes store</title>
+    <link rel="stylesheet" type="text/css" href="./assets/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button id="btnScrollToTop">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <div class="wrapper">
+        <!-- START HEADER -->
+        <header class="header">
+            <div class="grid wide">
+                <nav class="nav flex justify-between align-center">
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="nav__logo">
+                        <a href="/"><img class="logo-image" src="./assets/img/logo.png" alt=""></a>
+                    </div>
+                    <ul class="nav-middle__list flex align-center  hide-on-mobile-tablet">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Men</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Women</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Kids</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Accessories</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Trending</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Brands</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Sale</a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right__list flex align-center">
+                        <li class="nav-right__item nav-right__search">
+                            <i class="nav-right__search-icon fa fa-search" onclick="openSearch()"></i>
+                            <div id="searchOverlay" class="search-overlay">
+                                <i class="search-close-icon fa fa-times" onclick="closeSearch()"></i>
+                                <div class="search-overlay__content">
+                                    <form action="">
+                                        <input type="text" placeholder="Search.." name="search">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-right__item nav-right__user hide-on-mobile-tablet">
+                            <i class="fa fa-user"></i>
+                            <!-- IF USER CHUA LOGIN -->
+                            <!-- <ul class="nav-right__user-menu">
+                                <li class="nav-right__user-item">
+                                    <a href="#">Create Account</a>
+                                </li>
+                                <li class="nav-right__user-item">
+                                    <a href="#">Log in</a>
+                                </li>
+                            </ul> -->
+                            <!-- IF USER LOGIN -->
+                            <ul class="nav-right__user-menu">
+                                <li class="nav-right__user-item">
+                                    <a href="#">My Account</a>
+                                </li>
+                                <li class="nav-right__user-item">
+                                    <a href="#">My wishlist</a>
+                                </li>
+                                <li class="nav-right__user-item nav-right__user-item--separate">
+                                    <a href="#">Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-right__item nav-right__bag">
+                            <i class="fa fa-shopping-bag"></i>
+                            <span class="nav-right__bag-quantity">6</span>
+                            <div class="nav-right__bag-menu">
+                                <!-- IF CART IS EMPTY -->
+                                <!-- <img class="nav-right__bag-empty-img" src="./assets/img/empty-cart.png" alt=""> -->
+                                <h4 class="nav-right__bag-heading">Products added to the cart </h4>
+                                <!-- IF CART HAS PRODUCT-->
+                                <ul class="nav-right__bag-list">
+                                    <!-- CART ITEM -->
+                                    <li class="nav-right__bag-item flex align-center">
+                                        <img class="nav-right__bag-item-img" src="./assets/img/products/1.jpg" alt="">
+                                        <div class="nav-right__bag-item-info">
+                                            <div class="nav-right__bag-item-head flex justify-between align-center">
+                                                <h5 class="nav-right__bag-item-name">Women's Air Jordan 11 Low</h5>
+                                                <div class="nav-right__bag-item-price-wrap">
+                                                    <span class="nav-right__bag-item-price">2000$</span>
+                                                    <span class="nav-right__bag-item-multi">x</span>
+                                                    <span class="nav-right__bag-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nav-right__bag-item-body flex justify-between align-center">
+                                                <span class="nav-right__bag-item-desc">Color: Yellow. Size: 42</span>
+                                                <span class="nav-right__bag-item-remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END CART ITEM -->
+                                    <!-- CART ITEM -->
+                                    <li class="nav-right__bag-item flex align-center">
+                                        <img class="nav-right__bag-item-img" src="./assets/img/products/1.jpg" alt="">
+                                        <div class="nav-right__bag-item-info">
+                                            <div class="nav-right__bag-item-head flex justify-between align-center">
+                                                <h5 class="nav-right__bag-item-name">Women's Air Jordan 11 Low</h5>
+                                                <div class="nav-right__bag-item-price-wrap">
+                                                    <span class="nav-right__bag-item-price">2000$</span>
+                                                    <span class="nav-right__bag-item-multi">x</span>
+                                                    <span class="nav-right__bag-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nav-right__bag-item-body flex justify-between align-center">
+                                                <span class="nav-right__bag-item-desc">Color: Yellow. Size: 42</span>
+                                                <span class="nav-right__bag-item-remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END CART ITEM -->
+                                    <!-- CART ITEM -->
+                                    <li class="nav-right__bag-item flex align-center">
+                                        <img class="nav-right__bag-item-img" src="./assets/img/products/1.jpg" alt="">
+                                        <div class="nav-right__bag-item-info">
+                                            <div class="nav-right__bag-item-head flex justify-between align-center">
+                                                <h5 class="nav-right__bag-item-name">Women's Air Jordan 11 Low</h5>
+                                                <div class="nav-right__bag-item-price-wrap">
+                                                    <span class="nav-right__bag-item-price">2000$</span>
+                                                    <span class="nav-right__bag-item-multi">x</span>
+                                                    <span class="nav-right__bag-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nav-right__bag-item-body flex justify-between align-center">
+                                                <span class="nav-right__bag-item-desc">Color: Yellow. Size: 42</span>
+                                                <span class="nav-right__bag-item-remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END CART ITEM -->
+                                    <!-- CART ITEM -->
+                                    <li class="nav-right__bag-item flex align-center">
+                                        <img class="nav-right__bag-item-img" src="./assets/img/products/1.jpg" alt="">
+                                        <div class="nav-right__bag-item-info">
+                                            <div class="nav-right__bag-item-head flex justify-between align-center">
+                                                <h5 class="nav-right__bag-item-name">Women's Air Jordan 11 Low</h5>
+                                                <div class="nav-right__bag-item-price-wrap">
+                                                    <span class="nav-right__bag-item-price">2000$</span>
+                                                    <span class="nav-right__bag-item-multi">x</span>
+                                                    <span class="nav-right__bag-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nav-right__bag-item-body flex justify-between align-center">
+                                                <span class="nav-right__bag-item-desc">Color: Yellow. Size: 42</span>
+                                                <span class="nav-right__bag-item-remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END CART ITEM -->
+                                    <!-- CART ITEM -->
+                                    <li class="nav-right__bag-item flex align-center">
+                                        <img class="nav-right__bag-item-img" src="./assets/img/products/1.jpg" alt="">
+                                        <div class="nav-right__bag-item-info">
+                                            <div class="nav-right__bag-item-head flex justify-between align-center">
+                                                <h5 class="nav-right__bag-item-name">Women's Air Jordan 11 Low</h5>
+                                                <div class="nav-right__bag-item-price-wrap">
+                                                    <span class="nav-right__bag-item-price">2000$</span>
+                                                    <span class="nav-right__bag-item-multi">x</span>
+                                                    <span class="nav-right__bag-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nav-right__bag-item-body flex justify-between align-center">
+                                                <span class="nav-right__bag-item-desc">Color: Yellow. Size: 42</span>
+                                                <span class="nav-right__bag-item-remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END CART ITEM -->
+                                    <!-- CART ITEM -->
+                                    <li class="nav-right__bag-item flex align-center">
+                                        <img class="nav-right__bag-item-img" src="./assets/img/products/1.jpg" alt="">
+                                        <div class="nav-right__bag-item-info">
+                                            <div class="nav-right__bag-item-head flex justify-between align-center">
+                                                <h5 class="nav-right__bag-item-name">Women's Air Jordan 11 Low</h5>
+                                                <div class="nav-right__bag-item-price-wrap">
+                                                    <span class="nav-right__bag-item-price">2000$</span>
+                                                    <span class="nav-right__bag-item-multi">x</span>
+                                                    <span class="nav-right__bag-item-quantity">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="nav-right__bag-item-body flex justify-between align-center">
+                                                <span class="nav-right__bag-item-desc">Color: Yellow. Size: 42</span>
+                                                <span class="nav-right__bag-item-remove">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- END CART ITEM -->
+                                </ul>
+                                <a class="btn nav-right__bag-view-btn" href="#">View cart</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <!-- NAVBAR MOBILE -->
+                <nav class="nav-mobile">
+                    <div class="nav-mobile__head flex align-center justify-between">
+                        <div class="nav-mobile__head-user flex align-center">
+                            <img class="nav-mobile__head-user-avatar"
+                                src="https://avatar-redirect.appspot.com/google/111653064713185612497?size=400" alt="">
+                            <span class="nav-mobile__head-user-name">Tran Quang Tuyen</span>
+                        </div>
+                        <div class="nav-mobile__head-log-out">
+                            <span>Log out</span>
+                        </div>
+                    </div>
+                    <ul class="nav-mobile__list">
+                        <li>
+                            <a href="#" class="nav-mobile__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Men</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Women</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Kids</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Accessories</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Trending</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Brands</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-mobile__link">Sale</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- END NAVBAR MOBILE -->
+            </div>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- START SECTION SLIDER -->
+        <section class="slider">
+            <div class="grid wide">
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                    <button class="carousel-btn next-btn"><i class="fa fa-chevron-right"
+                            aria-hidden="true"></i></button>
+                    <div class="carousel">
+                        <div class="item">
+                            <img class="carousel-image__full" src="./assets/img/carousel-img-1.jpeg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="carousel-image__full" src="./assets/img/carousel-img-2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="carousel-image__full" src="./assets/img/carousel-img-3.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION SLIDER -->
+
+        <!-- START SECTION ARRIVAL -->
+        <section class="arrivals">
+            <h2 class="section-heading text-center">New Arrivals</h2>
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-6 c-12">
+                        <a href="#" class="arrival-product-item">
+                            <img class="arrival__item-image" src="./assets/img/hero1.jpg" alt="">
+                            <div class="arrival__item-image-overlay">
+                                <button class="btn arrival__item-button">Read more <i class="fa fa-search"></i></button>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <a href="#" class="arrival-product-item">
+                            <img class="arrival__item-image" src="./assets/img/hero2.jpg" alt="">
+                            <div class="arrival__item-image-overlay">
+                                <button class="btn arrival__item-button">Read more <i class="fa fa-search"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <a href="#" class="arrival-product-item">
+                            <img class="arrival__item-image" src="./assets/img/hero3.jpg" alt="">
+                            <div class="arrival__item-image-overlay">
+                                <button class="btn arrival__item-button">Read more <i class="fa fa-search"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <a href="#" class="arrival-product-item">
+                            <img class="arrival__item-image" src="./assets/img/hero4.jpg" alt="">
+                            <div class="arrival__item-image-overlay">
+                                <button class="btn arrival__item-button">Read more <i class="fa fa-search"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <a href="#" class="arrival-product-item">
+                            <img class="arrival__item-image" src="./assets/img/hero5.jpg" alt="">
+                            <div class="arrival__item-image-overlay">
+                                <button class="btn arrival__item-button">Read more <i class="fa fa-search"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col l-4 m-6 c-12">
+                        <a href="#" class="arrival-product-item">
+                            <img class="arrival__item-image" src="./assets/img/hero6.jpg" alt="">
+                            <div class="arrival__item-image-overlay">
+                                <button class="btn arrival__item-button">Read more <i class="fa fa-search"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTIOIN ARRIVAL -->
+
+        <!-- START SECTION HERO -->
+        <section class="big-deal">
+            <div class="grid wide">
+                <div class="big-deal-wrapper">
+                    <div class="big-deal-content">
+                        <h2 class="section-heading text-center">Deals of the week</h2>
+                        <div class="big-deal-timer flex justify-center align-center">
+                            <div class="big-deal-timer__days">
+                                <span>02</span>
+                                <span>days</span>
+                            </div>
+                            <div class="big-deal-timer__hours">
+                                <span>24</span>
+                                <span>hours</span>
+                            </div>
+                            <div class="big-deal-timer__minutes">
+                                <span>55</span>
+                                <span>minutes</span>
+                            </div>
+                            <div class="big-deal-timer__second">
+                                <span>24</span>
+                                <span>second</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION HERO -->
+
+        <!-- START SECTION BEST SELLERS -->
+        <section class="best-seller">
+            <div class="grid wide">
+                <h2 class="section-heading text-center">Best Sellers</h2>
+                <!-- tab items -->
+                <div class="tabs flex align-center justify-center">
+                    <div class="tab-item active">All</div>
+                    <div class="tab-item">Sale</div>
+                    <div class="tab-item">Best</div>
+                    <div class="tab-item">New</div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active">
+                        <div class="row">
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero1.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero2.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero3.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero4.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero5.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero6.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane">
+                        <div class="row">
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/products/4.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/products/5.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/products/3.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane">
+                        <div class="row">
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero1.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero2.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero3.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane">
+                        <div class="row">
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero4.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero5.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                            <div class="col l-4 m-6 c-12">
+                                <div class="tab-pane-card">
+                                    <img class="tab-pane-img" src="./assets/img/hero6.jpg" alt="">
+                                    <div class="tab-pane-card__content">
+                                        <h3 class="tab-pane-card__product-name">Product name</h3>
+                                        <p class="tab-pane-card__product-price">30000 $</p>
+                                    </div>
+                                    <div class="btn tab-pane-card__button">Add to cart <i class="fa fa-shopping-cart"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION BEST SELLERS -->
+
+        <!-- START SECTION SERVICE -->
+        <section class="service">
+            <div class="grid wide">
+                <h2 class="section-heading text-center">Services</h2>
+                <div class="row service-card-list">
+                    <div class="col l-3 m-6 c-12 service-cart-item">
+                        <div class="service-cart__header">
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-cart__title">
+                            <h3>Free ship with order over 1000$</h3>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 service-cart-item">
+                        <div class="service-cart__header">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-cart__title">
+                            <h3>Support 24/7, Call: <a href="tel:+0976 718 316">0976 718 316</a></h3>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 service-cart-item">
+                        <div class="service-cart__header">
+                            <i class="fa fa-exchange" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-cart__title">
+                            <h3>Free & easy return</h3>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 service-cart-item">
+                        <div class="service-cart__header">
+                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="service-cart__title">
+                            <h3>100% secure transactions</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION SERVICE -->
+
+        <!-- START SECTION BRANDS -->
+        <section class="brands">
+            <div class="grid wide">
+                <h2 class="section-heading text-center">Brands</h2>
+                <div class="brand-carousel">
+                    <div class="brand-item">
+                        <img class="brand-item__img" src="./assets/img/brands/adidas.svg" alt="">
+                    </div>
+                    <div class="brand-item">
+                        <img class="brand-item__img" src="./assets/img/brands/Blowfish.svg" alt="">
+                    </div>
+                    <div class="brand-item">
+                        <img class="brand-item__img" src="./assets/img/brands/Converse.svg" alt="">
+                    </div>
+                    <div class="brand-item">
+                        <img class="brand-item__img" src="./assets/img/brands/NewBalance.svg" alt="">
+                    </div>
+                    <div class="brand-item">
+                        <img class="brand-item__img" src="./assets/img/brands/puma.svg" alt="">
+                    </div>
+                    <div class="brand-item">
+                        <img class="brand-item__img" src="./assets/img/brands/Skechers.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END SECTION BRANDS -->
+        
+        <!-- START FOOTER -->
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="footer-head flex justify-between align-center">
+                    <div class="footer-head__logo">
+                        <img src="./assets/img/footer-logo.jpg" alt="">
+                    </div>
+                    <div class="footer-head__newsletter">
+                        <form action="" class="footer-head__newsletter-form">
+                            <input type="text" name="email" placeholder="Address email...">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="footer-head__social">
+                        <a class="footer-head__social-link" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="footer-head__social-link" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="footer-head__social-link" href="#"><i class="fa fa-google"></i></a>
+                        <a class="footer-head__social-link" href="#"><i class="fa fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="row">
+                        <div class="col l-3 m-6 c-12">
+                            <h3 class="footer-middle-heading">Contact us</h3>
+                            <div class="footer-middle-address">
+                                <p>Address: 45 Cong Hoa, phuong 4, Tan Binh, TP HCM</p>
+                                <p>Phone: +841 123 456 78</p>
+                                <p>Email info@lindashop.com</p>
+                            </div>
+                        </div>
+    
+                        <div class="col l-3 m-6 c-12">
+                            <h3 class="footer-middle-heading">Contact us</h3>
+                            <ul class="footer-middle-list">
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Advanced Search</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Orders and return</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Consultant</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Help & FAQs</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col l-3 m-6 c-12">
+                            <h3 class="footer-middle-heading">Collection</h3>
+                            <ul class="footer-middle-list">
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Advanced Search</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Orders and return</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Consultant</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Help & FAQs</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col l-3 m-6 c-12">
+                            <h3 class="footer-middle-heading">Climbing</h3>
+                            <ul class="footer-middle-list">
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Advanced Search</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Orders and return</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Consultant</a></li>
+                                <li class="footer-middle-item"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Help & FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="grid wide">
+                    <div class="footer-bottom-content flex justify-between">
+                        <p>Copyright © 2021 by Tuyen Tran</p>
+                        <div class="footer-bottom__card flex align-center">
+                            <img class="footer-bottom__card-img" src="./assets/img/card1.png" alt="">
+                            <img class="footer-bottom__card-img" src="./assets/img/card2.png" alt="">
+                            <img class="footer-bottom__card-img" src="./assets/img/card3.png" alt="">
+                            <img class="footer-bottom__card-img" src="./assets/img/card4.png" alt="">
+                            <img class="footer-bottom__card-img" src="./assets/img/card5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

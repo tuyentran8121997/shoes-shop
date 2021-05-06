@@ -1,0 +1,126 @@
+/* mobile vs tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .nav {
+        height: 64px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-right__bag-menu {
+        position: fixed;
+        top: 64px;
+        width: 100%;
+    }
+
+    .nav-right__bag-menu::before {
+        display: none;
+    }
+
+    .nav-mobile {
+        left: -100%;
+        position: fixed;
+        display: block;
+    }
+
+    .nav-mobile.active {
+        left: 0;
+    }
+    .footer-head {
+        flex-direction: column;
+    }
+
+    .footer-head__logo {
+        margin-bottom: 2rem;
+    }
+
+    .footer-head__newsletter-form {
+        margin-bottom: 2rem;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .nav-mobile {
+        width: 50vw;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-heading {
+        font-size: 3rem;
+    }
+
+    .big-deal-timer div {
+        width: 110px;
+        height: 110px;
+    } 
+}
+
+/* mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+
+    }
+    .nav-mobile__link {
+        padding: 1.5rem 0;
+    }
+
+    .carousel-btn {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .big-deal-wrapper {
+        padding-top: 50%;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .big-deal-timer div {
+        width: 80px;
+        height: 80px;
+    }
+    .big-deal-timer div span:first-child {
+        font-size: 1.5rem;
+    }
+    
+    .big-deal-timer div span:last-child {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    .footer-middle {
+        padding: 1rem;
+    }
+
+    .footer-head__newsletter-form {
+        width: 100%;
+    }
+
+    .footer-bottom__card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-bottom__card-img {
+        margin: 1rem 0;
+    }
+}
